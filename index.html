@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Best Practices -->
+  <title>PSGX Global | Premium Construction Materials Exporter India</title>
+  <meta name="description" content="Your trusted sourcing partner for premium construction materials, HVAC, sanitaryware, scaffolding, and industrial supplies from India. Request a quote today.">
+  <meta name="keywords" content="construction materials exporter, HVAC suppliers India, sanitaryware exports, industrial supplies, PSGX Global, scaffolding exporters, valves and pumps exporter">
+  <meta name="author" content="PSGX Global">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://psgxglobal.com/">
+  <meta property="og:title" content="PSGX Global | Premium Construction Materials Exporter India">
+  <meta property="og:description" content="Exporting top-quality construction, HVAC, hardware, and industrial supplies globally with end-to-end support. Source from certified Indian manufacturers.">
+  <meta property="og:image" content="https://psgxglobal.com/og-image.jpg">
+  <meta property="og:site_name" content="PSGX Global">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PSGX Global | Premium Construction Materials Exporter India">
+  <meta name="twitter:description" content="Exporting top-quality construction and industrial supplies globally. Source Tiles, HVAC, Valves, Scaffolding and more.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    // NOTE: Replace 'YOUR_PIXEL_ID' with your actual Meta Pixel ID
+    fbq('init', 'YOUR_PIXEL_ID'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt="Meta Pixel" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Scripts & Styling (Tailwind, React, FontAwesome) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .reveal-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+    .reveal-on-scroll.is-revealed { opacity: 1; transform: translateY(0); }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .whatsapp-float { animation: bounce 2.5s infinite; }
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-8px); }
+        60% { transform: translateY(-4px); }
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-900 bg-slate-50 antialiased overflow-x-hidden">
+  
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // --- CUSTOM HOOKS ---
+    const useScrollAnimation = () => {
+      useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        const elements = document.querySelectorAll('.reveal-on-scroll');
+        elements.forEach((el) => observer.observe(el));
+
+        return () => elements.forEach((el) => observer.unobserve(el));
+      }, []);
+    };
+
+    // --- MAIN APP COMPONENT ---
+    function App() {
+      const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+      const [formStatus, setFormStatus] = useState('idle');
+
+      useScrollAnimation();
+
+      const handleFormSubmit = (e) => {
+        e.preventDefault();
+        setFormStatus('submitting');
+        
+        // Trigger Meta Pixel Conversion Tracking on Form Submit
+        if (window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Landing Page Lead Form',
+            currency: 'USD',
+          });
+        }
+
+        setTimeout(() => {
+          setFormStatus('success');
+        }, 1200);
+      };
+
+      const scrollToSection = (id) => {
+        setIsMobileMenuOpen(false);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      // Updated product categories based on uploaded assets + Scaffolding
+      const productCategories = [
+        { 
+          title: "Tiles & Sanitaryware", 
+          icon: "fa-solid fa-faucet-drip", 
+          desc: "Floor, Wall, Ceramic, Porcelain & Vitrified Tiles. Premium Wash Basins, Water Closets, Faucets, Showers & Bathtubs." 
+        },
+        { 
+          title: "HVAC Systems & Components", 
+          icon: "fa-solid fa-fan", 
+          desc: "VRF & DX Air Conditioners, Air Handling Units, Fan Coils, Ventilation Systems, Grills, Diffusers, Ducts & Refrigerants." 
+        },
+        { 
+          title: "Mechanical & Industrial Supplies", 
+          icon: "fa-solid fa-gears", 
+          desc: "High-performance Valves, Pumps, Expansion Bellows, Flexible Joints, Seismic/Noise Isolation Systems, and Actuators." 
+        },
+        { 
+          title: "Hardware & Fittings", 
+          icon: "fa-solid fa-hammer", 
+          desc: "Durable Door/Window Fittings, Hinges, Handles, Locks, Fasteners, Clamps, Brackets, and Stainless Steel & Brass Accessories." 
+        },
+        { 
+          title: "Scaffolding Systems", 
+          icon: "fa-solid fa-cubes-stacked", 
+          desc: "Certified Cuplock, Ringlock, Frame scaffolding, Props, Jacks, and robust structural support systems for safe construction." 
+        },
+        { 
+          title: "Building Materials", 
+          icon: "fa-regular fa-building", 
+          desc: "High-grade cement, TMT steel, structural components, and plumbing essentials designed for maximum durability." 
+        },
+        { 
+          title: "Finishes & Accessories", 
+          icon: "fa-solid fa-layer-group", 
+          desc: "Structural paints, steel lintels, skirting, expansion joints, and advanced waterproofing solutions." 
+        },
+        { 
+          title: "Electrical & Lighting", 
+          icon: "fa-regular fa-lightbulb", 
+          desc: "Industrial wires, cables, LED panels, distribution boards, and energy-efficient smart lighting solutions." 
+        },
+      ];
+
+      return (
+        <div>
+          {/* --- HEADER --- */}
+          <header className="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300 shadow-sm">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-20">
+                <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('home')}>
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
+                      <i className="fa-solid fa-globe text-white text-xl"></i>
+                    </div>
+                    <span className="font-bold text-2xl tracking-tight text-slate-900">PSGX <span className="text-orange-600">Global</span></span>
+                  </div>
+                </div>
+
+                <nav className="hidden md:flex space-x-8">
+                  {['Home', 'Benefits', 'Categories', 'Contact'].map((item) => (
+                    <button 
+                      key={item} 
+                      onClick={() => scrollToSection(item.toLowerCase())}
+                      className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </nav>
+
+                <div className="hidden md:flex">
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg shadow-orange-600/30 flex items-center gap-2"
+                  >
+                    Get a Quote <i className="fa-solid fa-arrow-right text-sm"></i>
+                  </button>
+                </div>
+
+                <div className="md:hidden flex items-center">
+                  <button 
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    className="text-slate-600 hover:text-slate-900 focus:outline-none"
+                    aria-label="Toggle Menu"
+                  >
+                    {isMobileMenuOpen ? <i className="fa-solid fa-xmark text-2xl"></i> : <i className="fa-solid fa-bars text-2xl"></i>}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {isMobileMenuOpen && (
+              <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl py-4 px-4 flex flex-col gap-4">
+                {['Home', 'Benefits', 'Categories', 'Contact'].map((item) => (
+                    <button 
+                      key={item} 
+                      onClick={() => scrollToSection(item.toLowerCase())}
+                      className="text-left text-slate-700 font-medium py-2 border-b border-slate-100"
+                    >
+                      {item}
+                    </button>
+                  ))}
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="mt-2 bg-orange-600 text-white px-4 py-3 rounded-xl font-semibold text-center"
+                  >
+                    Get a Quote
+                  </button>
+              </div>
+            )}
+          </header>
+
+          {/* --- HERO --- */}
+          <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+              <div className="absolute -top-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-orange-100/60 blur-3xl" />
+              <div className="absolute top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-red-50/50 blur-3xl" />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-semibold text-sm mb-6">
+                <i className="fa-solid fa-globe text-orange-600"></i> Global Sourcing Partner based in India
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+                Connecting India's Best <br className="hidden md:block"/> Construction Materials <br className="hidden md:block"/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">With the World.</span>
+              </h1>
+              <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10">
+                One-stop solution for international buyers. We export premium Building Materials, HVAC, Electrical, Scaffolding, and Industrial Supplies with seamless global logistics.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-xl shadow-orange-600/30 flex items-center justify-center gap-2"
+                >
+                  Start Your Export Enquiry <i className="fa-solid fa-arrow-right"></i>
+                </button>
+                <button 
+                  onClick={() => scrollToSection('categories')}
+                  className="w-full sm:w-auto bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2"
+                >
+                  View Products
+                </button>
+              </div>
+              
+              <div className="mt-14 pt-10 border-t border-slate-200/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-medium text-slate-500">
+                <div className="flex items-center justify-center gap-2"><i className="fa-solid fa-shield-halved text-emerald-500"></i> Certified Quality</div>
+                <div className="flex items-center justify-center gap-2"><i className="fa-solid fa-globe text-blue-500"></i> Global Shipping</div>
+                <div className="flex items-center justify-center gap-2"><i className="fa-solid fa-arrow-trend-up text-orange-500"></i> Competitive Pricing</div>
+                <div className="flex items-center justify-center gap-2"><i className="fa-solid fa-circle-check text-purple-500"></i> End-to-End Support</div>
+              </div>
+            </div>
+          </section>
+
+          {/* --- BENEFITS --- */}
+          <section id="benefits" className="py-20 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Global Buyers Choose Us</h2>
+                <p className="text-lg text-slate-600">We streamline your procurement process by acting as a single point of contact for multiple high-quality Indian manufacturers.</p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow reveal-on-scroll delay-100 group">
+                  <div className="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i className="fa-regular fa-building text-orange-600 text-2xl"></i>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">One-Stop Sourcing</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Access a diverse range of products from cement to smart lighting, all coordinated through one dedicated partner.
+                  </p>
+                </div>
+
+                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow reveal-on-scroll delay-200 group">
+                  <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-shield-halved text-red-600 text-2xl"></i>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">Quality Assurance</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Rigorous inspection protocols ensure that every product meets international safety and durability standards.
+                  </p>
+                </div>
+
+                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow reveal-on-scroll delay-300 group">
+                  <div className="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-globe text-emerald-600 text-2xl"></i>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">Seamless Logistics</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    From documentation to last-mile delivery at your destination port, we manage the entire export lifecycle.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* --- CATEGORIES --- */}
+          <section id="categories" className="py-20 bg-slate-900 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col md:flex-row justify-between items-end mb-16 reveal-on-scroll">
+                <div className="max-w-2xl">
+                  <span className="text-orange-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Export Portfolio</span>
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4">Complete Sourcing Categories</h2>
+                  <p className="text-slate-400 text-lg">Detailed range of products tailored for residential, commercial, and industrial projects worldwide.</p>
+                </div>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="hidden md:flex items-center gap-2 text-white font-semibold hover:text-orange-400 transition-colors"
+                >
+                  Request Category Details <i className="fa-solid fa-arrow-right text-sm"></i>
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {productCategories.map((cat, idx) => (
+                  <div key={idx} className="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+                    <div>
+                      <div className="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
+                        <i className={`${cat.icon} text-3xl`}></i>
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{cat.title}</h3>
+                      <p className="text-slate-400 text-sm mb-6 leading-relaxed">{cat.desc}</p>
+                    </div>
+                    {/* Redirects straight to sales email */}
+                    <a href="mailto:sales@psgxglobal.com" className="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
+                      Enquire Now <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* --- CONTACT --- */}
+          <section id="contact" className="py-24 bg-orange-50 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-orange-200 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-200 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden reveal-on-scroll">
+                <div className="grid lg:grid-cols-5">
+                  
+                  <div className="lg:col-span-2 bg-slate-900 p-10 lg:p-12 text-white flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-3xl font-bold mb-4">Request a Quotation</h3>
+                      <p className="text-slate-300 mb-10">
+                        Submit your project specifications or bill of quantities (BOQ). Our export desk will provide a comprehensive quote and lead-time analysis within 24 business hours.
+                      </p>
+                      
+                      <div className="space-y-6">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
+                            <i className="fa-regular fa-envelope"></i>
+                          </div>
+                          <div>
+                            <p className="text-sm text-slate-400 font-medium mb-1">Email Us</p>
+                            <p className="font-semibold"><a href="mailto:sales@psgxglobal.com" className="hover:text-orange-400 transition">sales@psgxglobal.com</a></p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
+                            <i className="fa-solid fa-phone"></i>
+                          </div>
+                          <div>
+                            <p className="text-sm text-slate-400 font-medium mb-1">Call or WhatsApp</p>
+                            <p className="font-semibold"><a href="https://wa.me/919914010017" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition">+91 99140 10017</a></p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-orange-500">
+                            <i className="fa-solid fa-location-dot"></i>
+                          </div>
+                          <div>
+                            <p className="text-sm text-slate-400 font-medium mb-1">Location</p>
+                            <p className="font-semibold leading-relaxed">Ferozpur Road, Ludhiana,<br/> Punjab, India - 141012</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-3 p-10 lg:p-12">
+                    {formStatus === 'success' ? (
+                      <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-12">
+                        <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4">
+                          <i className="fa-solid fa-circle-check text-4xl"></i>
+                        </div>
+                        <h3 className="text-3xl font-bold text-slate-900">Quotation Request Received</h3>
+                        <p className="text-slate-600 max-w-md">
+                          Thank you for your interest. A PSGX specialist has been assigned to your inquiry and will contact you via email shortly.
+                        </p>
+                        <button 
+                          onClick={() => setFormStatus('idle')}
+                          className="mt-6 text-orange-600 font-semibold hover:underline"
+                        >
+                          Submit another request
+                        </button>
+                      </div>
+                    ) : (
+                      <form onSubmit={handleFormSubmit} className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div className="space-y-2">
+                            <label className="text-sm font-semibold text-slate-700">Full Name *</label>
+                            <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="John Doe" />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="text-sm font-semibold text-slate-700">Company Name *</label>
+                            <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="BuildCorp International" />
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div className="space-y-2">
+                            <label className="text-sm font-semibold text-slate-700">Email Address *</label>
+                            <input required type="email" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="john@example.com" />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="text-sm font-semibold text-slate-700">Phone Number *</label>
+                            <input required type="tel" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="+1 (555) 000-0000" />
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="text-sm font-semibold text-slate-700">Inquiry Details *</label>
+                          <textarea required rows="4" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white resize-none" placeholder="List products, estimated quantities, and your destination country/port..."></textarea>
+                        </div>
+
+                        <button 
+                          type="submit" 
+                          disabled={formStatus === 'submitting'}
+                          className="w-full bg-slate-900 hover:bg-slate-800 disabled:bg-slate-700 text-white font-bold py-4 rounded-xl transition-all transform hover:-translate-y-0.5 hover:shadow-lg flex items-center justify-center gap-2"
+                        >
+                          {formStatus === 'submitting' ? 'Processing...' : 'Submit Quotation Request'}
+                          {formStatus !== 'submitting' && <i className="fa-solid fa-arrow-right"></i>}
+                        </button>
+                      </form>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* --- FOOTER --- */}
+          <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                
+                <div className="flex flex-col items-center md:items-start gap-6">
+                  <div className="flex items-center gap-2">
+                    <i className="fa-solid fa-globe text-orange-600 text-3xl"></i>
+                    <span className="font-bold text-2xl tracking-tight text-white">PSGX <span className="text-orange-600">Global</span></span>
+                  </div>
+                  
+                  {/* Social Media Links */}
+                  <div className="flex gap-4">
+                    <a href="https://www.linkedin.com/company/psgx-global/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#0077B5] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61570728576983" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#1877F2] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/psgxglobals/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#E1306C] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                      <i className="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://youtube.com/@psgxglobal?si=rw_dxaXYg7X90Obr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#FF0000] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                      <i className="fa-brands fa-youtube"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="text-sm text-center md:text-right">
+                  <p>&copy; {new Date().getFullYear()} Procurement & Supply Group eXporting Global. All rights reserved.</p>
+                  <p className="mt-1">Ludhiana, Punjab, India | Serving Global Markets</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+          {/* --- WHATSAPP FLOATING BUTTON --- */}
+          <a 
+            href="https://wa.me/919914010017" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#1ebe57] transition-all z-50 flex items-center justify-center whatsapp-float"
+            aria-label="Chat with us on WhatsApp"
+            title="Chat with PSGX Global on WhatsApp"
+          >
+            <i className="fa-brands fa-whatsapp text-3xl"></i>
+          </a>
+
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
