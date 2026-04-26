@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Performance Optimizations -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  
   <!-- SEO Best Practices -->
   <title>PSGX Global | Premium Construction Materials Exporter India</title>
   <meta name="description" content="Your trusted sourcing partner for premium construction materials, HVAC, sanitaryware, scaffolding, and industrial supplies from India. Request a quote today.">
@@ -27,6 +31,27 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PSGX Global | Premium Construction Materials Exporter India">
   <meta name="twitter:description" content="Exporting top-quality construction and industrial supplies globally. Source Tiles, HVAC, Valves, Scaffolding and more.">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PSGX Global",
+    "url": "https://psgxglobal.com/",
+    "logo": "https://psgxglobal.com/psgx-global-logo.svg",
+    "email": "sales@psgxglobal.com",
+    "telephone": "+919914010017",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "953/7, Bhai Daya Singh Nagar, Barewal Road, Near Ashapuri Chowk",
+      "addressLocality": "Ludhiana",
+      "addressRegion": "Punjab",
+      "postalCode": "141012",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -57,7 +82,7 @@
     .delay-100 { transition-delay: 100ms; }
     .delay-200 { transition-delay: 200ms; }
     .delay-300 { transition-delay: 300ms; }
-    .whatsapp-float { animation: bounce 2.5s infinite; }
+    .float-anim { animation: bounce 2.5s infinite; }
     @keyframes bounce {
         0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
         40% { transform: translateY(-8px); }
@@ -65,7 +90,7 @@
     }
   </style>
 </head>
-<body class="font-sans text-slate-900 bg-slate-50 antialiased overflow-x-hidden">
+<body class="font-sans text-slate-900 bg-slate-50 antialiased overflow-x-hidden pb-16 md:pb-0">
 
   <!-- --- HEADER --- -->
   <header class="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300 shadow-sm">
@@ -89,7 +114,7 @@
 
         <div class="hidden md:flex">
           <button class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:-translate-y-0.5 hover:shadow-lg shadow-orange-600/30 flex items-center gap-2 scroll-link" data-target="contact">
-            Get a Quote <i class="fa-solid fa-arrow-right text-sm"></i>
+            Get Instant Quote <i class="fa-solid fa-arrow-right text-sm"></i>
           </button>
         </div>
 
@@ -107,12 +132,12 @@
       <button class="text-left text-slate-700 font-medium py-2 border-b border-slate-100 mobile-link" data-target="benefits">Benefits</button>
       <button class="text-left text-slate-700 font-medium py-2 border-b border-slate-100 mobile-link" data-target="categories">Categories</button>
       <button class="text-left text-slate-700 font-medium py-2 border-b border-slate-100 mobile-link" data-target="contact">Contact</button>
-      <button class="mt-2 bg-orange-600 text-white px-4 py-3 rounded-xl font-semibold text-center mobile-link" data-target="contact">Get a Quote</button>
+      <button class="mt-2 bg-orange-600 text-white px-4 py-3 rounded-xl font-semibold text-center mobile-link" data-target="contact">Get Instant Quote</button>
     </div>
   </header>
 
   <!-- --- HERO --- -->
-  <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+  <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-24 overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
       <div class="absolute -top-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-orange-100/60 blur-3xl"></div>
       <div class="absolute top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-red-50/50 blur-3xl"></div>
@@ -126,12 +151,17 @@
         Connecting India's Best <br class="hidden md:block"/> Construction Materials <br class="hidden md:block"/>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">With the World.</span>
       </h1>
+      
+      <!-- Trust Element -->
+      <p class="font-semibold text-orange-600 uppercase tracking-wide text-sm md:text-base mb-4">Trusted sourcing partner serving clients in 100+ countries</p>
+      
       <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10">
         One-stop solution for international buyers. We export premium Building Materials, HVAC, Electrical, Scaffolding, and Industrial Supplies with seamless global logistics.
       </p>
+
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
         <button class="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-xl shadow-orange-600/30 flex items-center justify-center gap-2 scroll-link" data-target="contact">
-          Start Your Export Enquiry <i class="fa-solid fa-arrow-right"></i>
+          Get Instant Quote <i class="fa-solid fa-arrow-right"></i>
         </button>
         <button class="w-full sm:w-auto bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 scroll-link" data-target="categories">
           View Products
@@ -214,13 +244,13 @@
             <h3 class="text-xl font-bold mb-2">Tiles & Sanitaryware</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">Floor, Wall, Ceramic, Porcelain & Vitrified Tiles. Premium Wash Basins, Water Closets, Faucets, Showers & Bathtubs.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 2 -->
-        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll delay-100">
           <div>
             <div class="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
               <i class="fa-solid fa-fan text-3xl"></i>
@@ -228,13 +258,13 @@
             <h3 class="text-xl font-bold mb-2">HVAC Systems</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">VRF & DX Air Conditioners, Air Handling Units, Fan Coils, Ventilation Systems, Grills, Diffusers, Ducts & Refrigerants.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 3 -->
-        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll delay-200">
           <div>
             <div class="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
               <i class="fa-solid fa-gears text-3xl"></i>
@@ -242,13 +272,13 @@
             <h3 class="text-xl font-bold mb-2">Mechanical & Industrial</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">High-performance Valves, Pumps, Expansion Bellows, Flexible Joints, Seismic/Noise Isolation Systems, and Actuators.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 4 -->
-        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll delay-300">
           <div>
             <div class="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
               <i class="fa-solid fa-hammer text-3xl"></i>
@@ -256,9 +286,9 @@
             <h3 class="text-xl font-bold mb-2">Hardware & Fittings</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">Durable Door/Window Fittings, Hinges, Handles, Locks, Fasteners, Clamps, Brackets, and Stainless Steel & Brass Accessories.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 5 -->
@@ -270,13 +300,13 @@
             <h3 class="text-xl font-bold mb-2">Scaffolding Systems</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">Certified Cuplock, Ringlock, Frame scaffolding, Props, Jacks, and robust structural support systems for safe construction.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 6 -->
-        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll delay-100">
           <div>
             <div class="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
               <i class="fa-regular fa-building text-3xl"></i>
@@ -284,13 +314,13 @@
             <h3 class="text-xl font-bold mb-2">Building Materials</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">High-grade cement, TMT steel, structural components, and plumbing essentials designed for maximum durability.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 7 -->
-        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll delay-200">
           <div>
             <div class="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
               <i class="fa-solid fa-layer-group text-3xl"></i>
@@ -298,13 +328,13 @@
             <h3 class="text-xl font-bold mb-2">Finishes & Accessories</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">Structural paints, steel lintels, skirting, expansion joints, and advanced waterproofing solutions.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
         <!-- Category 8 -->
-        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll">
+        <div class="bg-slate-800 p-6 flex flex-col justify-between rounded-2xl hover:bg-slate-700 transition-colors border border-slate-700 group reveal-on-scroll delay-300">
           <div>
             <div class="text-orange-500 mb-4 group-hover:text-orange-400 transition-colors">
               <i class="fa-regular fa-lightbulb text-3xl"></i>
@@ -312,9 +342,9 @@
             <h3 class="text-xl font-bold mb-2">Electrical & Lighting</h3>
             <p class="text-slate-400 text-sm mb-6 leading-relaxed">Industrial wires, cables, LED panels, distribution boards, and energy-efficient smart lighting solutions.</p>
           </div>
-          <a href="mailto:sales@psgxglobal.com" class="inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400">
-            Enquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-          </a>
+          <button class="scroll-link inline-flex items-center w-max text-sm font-semibold text-orange-500 group-hover:text-orange-400" data-target="contact">
+            Request Pricing <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
 
       </div>
@@ -334,7 +364,7 @@
             <div>
               <h3 class="text-3xl font-bold mb-4">Request a Quotation</h3>
               <p class="text-slate-300 mb-10">
-                Submit your project specifications or bill of quantities (BOQ). Our export desk will process the details and contact you via email shortly.
+                Submit your project specifications or bill of quantities (BOQ). Our export desk will provide a comprehensive quote and lead-time analysis within 24 business hours.
               </p>
               
               <div class="space-y-6">
@@ -354,7 +384,7 @@
                   </div>
                   <div>
                     <p class="text-sm text-slate-400 font-medium mb-1">Call or WhatsApp</p>
-                    <p class="font-semibold"><a href="https://wa.me/919914010017" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition">+91 99140 10017</a></p>
+                    <p class="font-semibold"><a href="tel:+919914010017" class="hover:text-orange-400 transition">+91 99140 10017</a></p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -363,60 +393,74 @@
                   </div>
                   <div>
                     <p class="text-sm text-slate-400 font-medium mb-1">Location</p>
-                    <p class="font-semibold leading-relaxed">Ferozpur Road, Ludhiana,<br/> Punjab, India - 141012</p>
+                    <p class="font-semibold leading-relaxed text-sm">953/7, Bhai Daya Singh Nagar,<br/> Barewal Road, Near Ashapuri Chowk,<br/> Ludhiana, Punjab, India - 141012</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="lg:col-span-3 p-10 lg:p-12">
+          <div class="lg:col-span-3 p-10 lg:p-12 relative">
             
-            <!-- Success State (Hidden initially) -->
+            <!-- Success State -->
             <div id="successMessage" class="hidden h-full flex-col items-center justify-center text-center space-y-4 py-12">
               <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4">
                 <i class="fa-solid fa-circle-check text-4xl"></i>
               </div>
-              <h3 class="text-3xl font-bold text-slate-900">Quotation Request Initialized</h3>
+              <h3 class="text-3xl font-bold text-slate-900">Request Submitted!</h3>
               <p class="text-slate-600 max-w-md">
-                Your default email client has been opened to complete the request. A PSGX specialist will contact you via email shortly!
+                Your request has been submitted successfully. Our team will contact you shortly.
               </p>
               <button id="resetFormBtn" class="mt-6 text-orange-600 font-semibold hover:underline">
                 Submit another request
               </button>
             </div>
 
-            <!-- Quotation Form -->
-            <form id="quoteForm" class="space-y-6">
+            <!-- API Error State -->
+            <div id="errorMessage" class="hidden absolute top-4 left-10 right-10 bg-red-100 text-red-700 p-4 rounded-xl text-center text-sm font-semibold shadow-sm z-10">
+              There was an error submitting your request. Please try again or contact us directly.
+            </div>
+
+            <!-- Quotation Form via API -->
+            <form id="quoteForm" method="POST" action="/api/send-quote" class="space-y-6" novalidate>
+              
+              <!-- Anti-Spam Honeypot (Hidden) -->
+              <input type="text" name="website" id="website_hp" style="display:none" tabindex="-1" autocomplete="off">
+              
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label class="text-sm font-semibold text-slate-700" for="name">Full Name *</label>
-                  <input required id="name" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="John Doe" />
+                  <input required id="name" name="name" type="text" aria-required="true" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="John Doe" />
+                  <p id="name-error" class="hidden error-msg text-red-500 text-xs mt-1">This field is required.</p>
                 </div>
                 <div class="space-y-2">
                   <label class="text-sm font-semibold text-slate-700" for="company">Company Name *</label>
-                  <input required id="company" type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="BuildCorp International" />
+                  <input required id="company" name="company" type="text" aria-required="true" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="BuildCorp International" />
+                  <p id="company-error" class="hidden error-msg text-red-500 text-xs mt-1">This field is required.</p>
                 </div>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label class="text-sm font-semibold text-slate-700" for="email">Email Address *</label>
-                  <input required id="email" type="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="john@example.com" />
+                  <input required id="email" name="email" type="email" aria-required="true" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="john@example.com" />
+                  <p id="email-error" class="hidden error-msg text-red-500 text-xs mt-1">Please enter a valid email address.</p>
                 </div>
                 <div class="space-y-2">
                   <label class="text-sm font-semibold text-slate-700" for="phone">Phone Number *</label>
-                  <input required id="phone" type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="+1 (555) 000-0000" />
+                  <input required id="phone" name="phone" type="tel" aria-required="true" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white" placeholder="+1 (555) 000-0000" />
+                  <p id="phone-error" class="hidden error-msg text-red-500 text-xs mt-1">This field is required.</p>
                 </div>
               </div>
 
               <div class="space-y-2">
                 <label class="text-sm font-semibold text-slate-700" for="details">Inquiry Details *</label>
-                <textarea required id="details" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white resize-none" placeholder="List products, estimated quantities, and your destination country/port..."></textarea>
+                <textarea required id="details" name="details" rows="4" aria-required="true" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-600 focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white resize-none" placeholder="List products, estimated quantities, and your destination country/port..."></textarea>
+                <p id="details-error" class="hidden error-msg text-red-500 text-xs mt-1">Please provide some details.</p>
               </div>
 
               <button type="submit" id="submitBtn" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all transform hover:-translate-y-0.5 hover:shadow-lg flex items-center justify-center gap-2">
-                Submit Quotation Request <i class="fa-solid fa-arrow-right"></i>
+                Get Instant Quote <i class="fa-solid fa-arrow-right"></i>
               </button>
             </form>
             
@@ -439,16 +483,16 @@
           
           <!-- Social Media Links -->
           <div class="flex gap-4">
-            <a href="https://www.linkedin.com/company/psgx-global/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#0077B5] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+            <a href="https://www.linkedin.com/company/psgx-global/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#0077B5] hover:-translate-y-1 transition-all duration-300 shadow-lg" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61570728576983" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#1877F2] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+            <a href="https://www.facebook.com/profile.php?id=61570728576983" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#1877F2] hover:-translate-y-1 transition-all duration-300 shadow-lg" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/psgxglobals/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#E1306C] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+            <a href="https://www.instagram.com/psgxglobals/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#E1306C] hover:-translate-y-1 transition-all duration-300 shadow-lg" aria-label="Instagram">
               <i class="fa-brands fa-instagram text-lg"></i>
             </a>
-            <a href="https://youtube.com/@psgxglobal?si=rw_dxaXYg7X90Obr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#FF0000] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+            <a href="https://youtube.com/@psgxglobal?si=rw_dxaXYg7X90Obr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#FF0000] hover:-translate-y-1 transition-all duration-300 shadow-lg" aria-label="YouTube">
               <i class="fa-brands fa-youtube"></i>
             </a>
           </div>
@@ -456,23 +500,30 @@
 
         <div class="text-sm text-center md:text-right">
           <p>&copy; <script>document.write(new Date().getFullYear())</script> Procurement & Supply Group eXporting Global. All rights reserved.</p>
-          <p class="mt-1">Ludhiana, Punjab, India | Serving Global Markets</p>
+          <p class="mt-1">953/7, Bhai Daya Singh Nagar, Barewal Road, Ludhiana, India</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- --- WHATSAPP FLOATING BUTTON --- -->
-  <a 
-    href="https://wa.me/919914010017" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#1ebe57] transition-all z-50 flex items-center justify-center whatsapp-float"
-    aria-label="Chat with us on WhatsApp"
-    title="Chat with PSGX Global on WhatsApp"
-  >
-    <i class="fa-brands fa-whatsapp text-3xl"></i>
-  </a>
+  <!-- --- FLOATING CONTACT & MOBILE STICKY CTA --- -->
+  <div class="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-4 md:hidden z-40 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex gap-2">
+    <button class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl flex-1 scroll-link" data-target="contact">
+      Get Quote
+    </button>
+    <a href="tel:+919914010017" class="bg-slate-100 text-slate-800 px-4 py-3 rounded-xl flex items-center justify-center border border-slate-200">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <div class="fixed bottom-24 md:bottom-6 right-6 flex flex-col gap-3 z-50">
+    <a href="tel:+919914010017" class="bg-blue-600 text-white w-14 h-14 rounded-full shadow-2xl hover:bg-blue-700 transition-all flex items-center justify-center md:hidden" aria-label="Call Us">
+      <i class="fa-solid fa-phone text-2xl"></i>
+    </a>
+    <a href="https://wa.me/919914010017" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#1ebe57] transition-all flex items-center justify-center float-anim" aria-label="Chat with us on WhatsApp" title="Chat with PSGX Global on WhatsApp">
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+  </div>
 
   <!-- --- INTERACTIONS & LOGIC --- -->
   <script>
@@ -498,7 +549,6 @@
             const targetId = link.getAttribute('data-target');
             const targetElement = document.getElementById(targetId);
             
-            // Hide mobile menu if open
             if (!mobileMenu.classList.contains('hidden')) {
                 toggleMenu();
             }
@@ -519,54 +569,85 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
 
-    // 4. Form Submission Intercept (Mailto Auto-send)
+    // 4. API-Based Form Submission with Validation
     const quoteForm = document.getElementById('quoteForm');
     const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
     const resetBtn = document.getElementById('resetFormBtn');
     const submitBtn = document.getElementById('submitBtn');
 
-    quoteForm.addEventListener('submit', function(e) {
+    quoteForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        errorMessage.classList.add('hidden');
         
-        // Change button state
-        const originalBtnHTML = submitBtn.innerHTML;
-        submitBtn.innerHTML = 'Processing...';
-        submitBtn.disabled = true;
+        // Clear all inline errors
+        document.querySelectorAll('.error-msg').forEach(el => el.classList.add('hidden'));
 
-        // Meta Pixel Tracking
-        if (window.fbq) {
-            window.fbq('track', 'Lead', {
-                content_name: 'Landing Page Lead Form',
-                currency: 'USD',
-            });
+        // Basic Front-End Validation
+        let isValid = true;
+        const requiredFields = ['name', 'company', 'phone', 'details'];
+        requiredFields.forEach(field => {
+            if(!document.getElementById(field).value.trim()) {
+                document.getElementById(`${field}-error`).classList.remove('hidden');
+                isValid = false;
+            }
+        });
+
+        // Email Validation
+        const email = document.getElementById('email').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById('email-error').classList.remove('hidden');
+            isValid = false;
         }
 
-        // Get Form Data
-        const name = document.getElementById('name').value;
-        const company = document.getElementById('company').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const details = document.getElementById('details').value;
+        // Honeypot Spam Check (Silent Fail for Bots)
+        if(document.getElementById('website_hp').value !== "") {
+            isValid = false; 
+        }
 
-        // Construct mailto link
-        const subject = encodeURIComponent(`Quotation Request from ${company}`);
-        const body = encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\n\nInquiry Details:\n${details}`);
-        const mailtoUrl = `mailto:sales@psgxglobal.com?subject=${subject}&body=${body}`;
+        if(!isValid) return;
 
-        // Simulate short delay then redirect and show success
-        setTimeout(() => {
-            window.location.href = mailtoUrl; // This automatically triggers the email client
-            quoteForm.classList.add('hidden');
-            successMessage.classList.remove('hidden');
-            successMessage.classList.add('flex');
-            
-            // Reset button
+        // Processing State (No artificial delay, bound strictly to API)
+        const originalBtnHTML = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = new FormData(quoteForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // Fetch Call to Backend API
+            const response = await fetch('/api/send-quote', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                // Trigger Meta Pixel Conversion
+                if (window.fbq) {
+                    window.fbq('track', 'Lead', { content_name: 'Quote API Submit', currency: 'USD' });
+                }
+
+                // Show Success State
+                quoteForm.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('flex');
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        } catch (error) {
+            // Show Error State
+            errorMessage.classList.remove('hidden');
+        } finally {
+            // Reset Button State
             submitBtn.innerHTML = originalBtnHTML;
             submitBtn.disabled = false;
-        }, 500);
+        }
     });
 
-    // 5. Reset Form
+    // 5. Reset Form after Success
     resetBtn.addEventListener('click', () => {
         quoteForm.reset();
         successMessage.classList.add('hidden');
